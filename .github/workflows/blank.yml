@@ -17,7 +17,7 @@ jobs:
         steps:
           - uses: actions/checkout@v3
           - name: Run a one-line script
-            run: npm install
+            run: npm install | npm install vitest 
           - name: Linting
             run: npm run lint
   test :
