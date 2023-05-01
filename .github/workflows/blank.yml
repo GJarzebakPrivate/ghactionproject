@@ -24,12 +24,14 @@ jobs:
         needs: lint
         runs-on: ubuntu-latest
         steps:
+          - uses: actions/checkout@v3
           - name: Testing
             run: npm run test
   build :
         needs: test
         runs-on: ubuntu-latest
         steps:
+          - uses: actions/checkout@v3
           - name: Building
             run: npm run build
           - name: Message
